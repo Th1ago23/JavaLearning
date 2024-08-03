@@ -1,46 +1,53 @@
-Projeto Carro
-Este repositório contém uma implementação de classes em Java para representar um carro e suas variações. Ele inclui métodos para calcular o preço médio, verificar o maior preço e o menor preço entre três preços fornecidos.
+# Projeto de Modelos de Carros
 
-Estrutura do Projeto
-O projeto contém as seguintes classes:
+Este projeto demonstra um sistema de gerenciamento de modelos de carros em Java. Inclui classes para representar um carro com preços variados e um modelo de carro específico com ano e tipo. Também contém métodos para calcular o preço médio e verificar os maiores e menores preços.
 
-Carro
-ModeloCarro
-Test
-Carro
-A classe Carro possui os seguintes atributos e métodos:
+## Índice
 
-Atributos
-modelo: String - modelo do carro.
-preco1: double - primeiro preço do carro.
-preco2: double - segundo preço do carro.
-preco3: double - terceiro preço do carro.
-Métodos
-getPreco1(), setPreco1(double preco1)
-getModelo(), setModelo(String modelo)
-getPreco2(), setPreco2(double preco2)
-getPreco3(), setPreco3(double preco3)
-definirModelo(String modelo)
-precoMedio(): Calcula o preço médio entre os três preços.
-verificaMaiorPreco(): Verifica o maior preço entre os três preços.
-verificaMenorPreco(): Verifica o menor preço entre os três preços.
-ModeloCarro
-A classe ModeloCarro herda de Carro e adiciona os seguintes atributos e métodos:
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Contribuindo](#contribuindo)
+- [Licença](#licença)
+- [Contato](#contato)
 
-Atributos
-anoModelo: int - ano do modelo do carro.
-tipoModelo: String - tipo do modelo do carro.
-Métodos
-getAnoModelo(), setAnoModelo(int anoModelo)
-getTipoModelo(), setTipoModelo(String tipoModelo)
-Test
-A classe Test contém o método main para testar a funcionalidade das classes Carro e ModeloCarro.
+## Instalação
 
-Uso
-Para usar este projeto, basta clonar o repositório e compilar os arquivos Java. Abaixo está um exemplo de uso:
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/usuario/nome-do-projeto.git
+    ```
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd nome-do-projeto
+    ```
+3. Compile o projeto:
+    ```bash
+    javac -d bin src/Models/Carro.java src/Models/ModeloCarro.java src/Test.java
+    ```
+4. Execute o projeto:
+    ```bash
+    java -cp bin Test
+    ```
 
-java
-Copiar código
+## Uso
+
+O projeto inclui as seguintes classes e métodos:
+
+### Classes
+
+- **Carro**: Representa um carro com múltiplos preços.
+  - Atributos: `modelo`, `preco1`, `preco2`, `preco3`
+  - Métodos: `getPreco1`, `setPreco1`, `getModelo`, `setModelo`, `getPreco3`, `setPreco3`, `getPreco2`, `setPreco2`, `definirModelo`, `precoMedio`, `verificaMaiorPreco`, `verificaMenorPreco`
+
+- **ModeloCarro**: Extende a classe Carro e adiciona atributos específicos do modelo.
+  - Atributos: `anoModelo`, `tipoModelo`
+  - Métodos: `getAnoModelo`, `setAnoModelo`, `getTipoModelo`, `setTipoModelo`
+
+### Exemplos
+
+No arquivo `Test.java`, é criada uma instância de `ModeloCarro` e são chamados métodos para calcular o preço médio, verificar o maior preço e o menor preço.
+
+```java
 import Models.ModeloCarro;
 
 public class Test {
@@ -51,7 +58,3 @@ public class Test {
         System.out.println(carro.verificaMenorPreco());
     }
 }
-Este código cria uma instância de ModeloCarro e imprime o preço médio, o maior preço e o menor preço.
-
-Contribuição
-Sinta-se à vontade para contribuir com este projeto enviando pull requests. Para problemas ou sugestões, abra uma issue.
